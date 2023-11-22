@@ -6,7 +6,6 @@ function ouvrirPorte(jour) {
 
   if (moisActuel === 11 && anneeActuelle === 2023) {
     if (jourActuel >= jour) {
-      etatCalendrier[jour] = true;
       document.getElementById("day" + jour).classList.add("opened");
       window.location.href = "./" + jour + ".html";
     } else {
