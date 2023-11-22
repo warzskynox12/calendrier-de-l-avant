@@ -4,7 +4,7 @@ function ouvrirPorte(jour) {
   var moisActuel = dateActuelle.getMonth(); // getMonth() retourne les mois de 0 à 11
   var jourActuel = dateActuelle.getDate();
 
-  if (moisActuel === 11 && anneeActuelle === 2023) {
+  if (moisActuel === 10 && anneeActuelle === 2023) {
     if (jourActuel >= jour) {
       document.getElementById("day" + jour).classList.add("opened");
       window.location.href = "./" + jour + ".html";
