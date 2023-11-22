@@ -7,7 +7,7 @@ function ouvrirPorte(jour) {
   if (moisActuel >= 11 && anneeActuelle === 2023) {
     if (jourActuel >= jour) {
       document.getElementById("day" + jour).classList.add("opened");
-      window.location.href = "./1 copy " + jour + ".html";
+      window.location.href = "./html/1 copy " + jour + ".html";
       console.log(jourActuel + " " + moisActuel + " " + anneeActuelle);
     } else {
       alert(
