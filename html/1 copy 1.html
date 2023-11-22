@@ -40,28 +40,16 @@
   </head>
   <body>
     <div class="containe">
-      <button id="prevBtn"><</button>
       <div class="carousel" id="carousel">
         <img src="../public/6295996_page-0004.jpg" alt="Image 1" width="100%" />
         <img src="../public/6295996_page-0005.jpg" alt="Image 2" width="100%" />
         <img src="../public/6295996_page-0006.jpg" alt="Image 3" width="100%" />
       </div>
-      <button id="nextBtn">></button>
     </div>
 
     <script>
       var carousel = document.getElementById("carousel");
-      var nextBtn = document.getElementById("nextBtn");
-      var prevBtn = document.getElementById("prevBtn");
       var touchStartX;
-
-      nextBtn.onclick = function () {
-        carousel.scrollBy({ left: carousel.offsetWidth, behavior: "smooth" });
-      };
-
-      prevBtn.onclick = function () {
-        carousel.scrollBy({ left: -carousel.offsetWidth, behavior: "smooth" });
-      };
 
       carousel.addEventListener("touchstart", function (e) {
         touchStartX = e.touches[0].clientX;
