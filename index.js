@@ -1,7 +1,7 @@
 function ouvrirPorte(jour) {
   var dateActuelle = new Date();
   var anneeActuelle = dateActuelle.getFullYear();
-  var moisActuel = dateActuelle.getMonth(); // getMonth() retourne les mois de 0 à 11
+  var moisActuel = dateActuelle.getMonth() + 1; // getMonth() retourne les mois de 0 à 11
   var jourActuel = dateActuelle.getDate();
 
   if (moisActuel === 10 && anneeActuelle === 2023) {
@@ -21,4 +21,5 @@ function ouvrirPorte(jour) {
       "Cette porte ne peut être ouverte que pendant le mois de décembre de l'année 2023."
     );
   }
+  console.log(jourActuel + " " + moisActuel + " " + anneeActuelle);
 }
