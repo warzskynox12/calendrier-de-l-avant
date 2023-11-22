@@ -8,6 +8,7 @@ function ouvrirPorte(jour) {
     if (jourActuel >= jour) {
       document.getElementById("day" + jour).classList.add("opened");
       window.location.href = "./" + jour + ".html";
+      console.log(jourActuel + " " + moisActuel + " " + anneeActuelle);
     } else {
       alert(
         "c'est pas bien de tricher, mais vous devez attendre jusqu'au jour " +
