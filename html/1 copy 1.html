@@ -15,8 +15,9 @@
       }
       .containe {
         display: grid;
-        grid-template-columns: 0.2fr 1fr 0.2fr;
+        grid-template-columns: 0.2fr auto 0.2fr;
         height: 100%;
+        width: 100%;
       }
       button {
         width: 100%;
@@ -41,9 +42,9 @@
     <div class="containe">
       <button id="prevBtn"><</button>
       <div class="carousel" id="carousel">
-        <img src="../public/6295996_page-0004.jpg" alt="Image 1" />
-        <img src="../public/6295996_page-0005.jpg" alt="Image 2" />
-        <img src="../public/6295996_page-0006.jpg" alt="Image 3" />
+        <img src="../public/6295996_page-0004.jpg" alt="Image 1" width="100%" />
+        <img src="../public/6295996_page-0005.jpg" alt="Image 2" width="100%" />
+        <img src="../public/6295996_page-0006.jpg" alt="Image 3" width="100%" />
       </div>
       <button id="nextBtn">></button>
     </div>
@@ -52,6 +53,7 @@
       var carousel = document.getElementById("carousel");
       var nextBtn = document.getElementById("nextBtn");
       var prevBtn = document.getElementById("prevBtn");
+      var touchStartX;
 
       nextBtn.onclick = function () {
         carousel.scrollBy({ left: carousel.offsetWidth, behavior: "smooth" });
@@ -60,6 +62,29 @@
       prevBtn.onclick = function () {
         carousel.scrollBy({ left: -carousel.offsetWidth, behavior: "smooth" });
       };
+
+      carousel.addEventListener("touchstart", function (e) {
+        touchStartX = e.touches[0].clientX;
+      });
+
+      carousel.addEventListener("touchmove", function (e) {
+        var touchEndX = e.touches[0].clientX;
+        var diffX = touchStartX - touchEndX;
+
+        if (diffX > 0) {
+          // Swipe left
+          carousel.scrollBy({ left: carousel.offsetWidth, behavior: "smooth" });
+        } else if (diffX < 0) {
+          // Swipe right
+          carousel.scrollBy({
+            left: -carousel.offsetWidth,
+            behavior: "smooth",
+          });
+        }
+
+        // Prevent scrolling in y direction
+        e.preventDefault();
+      });
     </script>
   </body>
 </html>
