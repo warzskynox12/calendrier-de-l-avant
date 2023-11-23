@@ -8,7 +8,6 @@ function ouvrirPorte(jour) {
     if (jourActuel >= jour) {
       document.getElementById("day" + jour).classList.add("opened");
       window.location.href = "./html/1 copy " + jour + ".html";
-      console.log(jourActuel + " " + moisActuel + " " + anneeActuelle);
     } else {
       alert(
         "c'est pas bien de tricher, mais vous devez attendre jusqu'au jour " +
@@ -21,5 +20,4 @@ function ouvrirPorte(jour) {
       "Cette porte ne peut être ouverte que pendant le mois de décembre de l'année 2023."
     );
   }
-  console.log(jourActuel + " " + moisActuel + " " + anneeActuelle);
 }
