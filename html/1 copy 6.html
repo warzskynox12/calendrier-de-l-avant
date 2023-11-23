@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .carousel {
+        display: flex;
+        overflow-x: hidden;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh; /* Adjust this value as needed */
+        width: 100%;
+        scroll-snap-type: x mandatory;
+      }
+      .carousel img {
+        flex: 0 0 auto;
+        width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        scroll-snap-align: start;
+      }
+    </style>
+    </style>
+  </head>
+  <script>
+  
+  </script>
+  <body>
+    <div class="carousel" id="carousel">
+      <img src="../public/6295996_page-0016.jpg" alt="Image 1" />
+      <img src="../public/6295996_page-0018.jpg" alt="Image 2" />
+    </div>
+
+    <script>
+      
+      var carousel = document.getElementById("carousel");
+      var touchStartX;
+
+      carousel.addEventListener("touchstart", function (e) { 
+        touchStartX = e.touches[0].clientX;
+      });
+
+      carousel.addEventListener("touchmove", function (e) {
+        var touchEndX = e.touches[0].clientX;
+        var diffX = touchStartX - touchEndX;
+
+        if (diffX > 0) { // Swipe left
+          carousel.scrollBy({left: carousel.offsetWidth, behavior: 'smooth'});
+        } else if (diffX < 0) { // Swipe right
+          carousel.scrollBy({left: -carousel.offsetWidth, behavior: 'smooth'});
+        }
+
+        // Prevent scrolling in y direction
+        e.preventDefault();
+      });
+    </script>
+  </body>
+</html>

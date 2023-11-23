@@ -7,15 +7,18 @@ body {
   margin: 10px;
   background-color: #f5f5f5;
   overflow: hidden;
+  background-image: url("./stretched-1920-1080-1094677.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
 .calendar-container {
   display: grid;
   height: 100%;
   width: 100%;
   grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 0.2fr;
   grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 0.2fr;
-  grid-gap: 10px;
+  grid-gap: 30px;
   grid-template-areas:
     ". . . . . . . ."
     ". day1 day2 day3 day4 day5 day6 . "
@@ -24,15 +27,224 @@ body {
     ". day19 day20 day21 day22 day23 day24 ."
     ". . . . . . . .";
 }
+#day1 {
+  grid-area: day1;
+  background-image: url("./R\ \(1\).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+}
+#day2 {
+  grid-area: day2;
+  background-image: url("./R\ \(2\).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+}
+#day3 {
+  grid-area: day3;
+  background-image: url("./R\ \(3\).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+#day4 {
+  grid-area: day4;
+  background-image: url("./R\ \(4\).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#day5 {
+  grid-area: day5;
+  background-image: url("./R.jpg");
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#day6 {
+  grid-area: day6;
+  background-image: url("./R\ \(1\).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+}
+#day7 {
+  grid-area: day7;
+  background-image: url("./OIP.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#day8 {
+  grid-area: day8;
+  background-image: url("./R\ \(2\).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+}
+#day9 {
+  grid-area: day9;
+  background-image: url("./R\ \(3\).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+#day10 {
+  grid-area: day10;
+  background-image: url("./R.jpg");
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#day11 {
+  grid-area: day11;
+  background-image: url("./OIP.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#day12 {
+  grid-area: day12;
+  background-image: url("./R\ \(2\).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+}
+#day13 {
+  grid-area: day13;
+  background-image: url("./OIP.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#day14 {
+  grid-area: day14;
+  background-image: url("./R\ \(4\).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#day15 {
+  grid-area: day15;
+  background-image: url("./R.jpg");
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#day16 {
+  grid-area: day16;
+  background-image: url("./OIP.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#day17 {
+  grid-area: day17;
+  background-image: url("./R\ \(1\).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+}
+#day18 {
+  grid-area: day18;
+  background-image: url("./R\ \(3\).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+#day19 {
+  grid-area: day19;
+  background-image: url("./R\ \(2\).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+}
+#day20 {
+  grid-area: day20;
+  background-image: url("./R\ \(4\).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#day21 {
+  grid-area: day21;
+  background-image: url("./R.jpg");
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#day22 {
+  grid-area: day22;
+  background-image: url("./R\ \(4\).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#day23 {
+  grid-area: day23;
+  background-image: url("./R\ \(3\).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+#day24 {
+  grid-area: day24;
+  background-image: url("./r1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff;
+}
 .calendar-box {
   border: 2px solid #7a7a7a;
-  align-items: center;
+  align-items: end;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   background-color: #ffffff;
 }
-
 .day-number {
-  font-size: 1.2em;
-  color: #333333;
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 758px) {
+  body {
+    background-image: url("./R.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .calendar-container {
+    grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
+    grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.1fr;
+    grid-gap: 30px;
+    grid-template-areas:
+      ". . . . ."
+      ". day1 day2 day3 ."
+      ". day4 day5 day6 ."
+      ". day7 day8 day9 ."
+      ". day10 day11 day12 ."
+      ". day13 day14 day15 ."
+      ". day16 day17 day18 ."
+      ". day19 day20 day21 ."
+      ". day22 day23 day24 ."
+      ". . . . .";
+  }
 }
