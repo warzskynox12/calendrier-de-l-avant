@@ -230,6 +230,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    overflow: hidden;
   }
   .calendar-container {
     grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
