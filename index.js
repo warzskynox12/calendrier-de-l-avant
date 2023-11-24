@@ -4,7 +4,7 @@ function ouvrirPorte(jour) {
   var moisActuel = dateActuelle.getMonth() + 1; // getMonth() retourne les mois de 0 à 11
   var jourActuel = dateActuelle.getDate();
 
-  if (moisActuel >= 12) {
+  if (moisActuel >= 11) {
     if (jourActuel >= jour) {
       document.getElementById("day" + jour).classList.add("opened");
       window.location.href = "./html/1 copy " + jour + ".html";
