@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html>
   <head>
-<style>
-body{
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      p {
+        font-size: 50px;
+        text-align: center;
+        margin-top: 20%;
 
-}
-</style>
+      }
+    </style>
   </head>
   <body>
-<p>je suis désoler de t'annoncer que j'ai égaré les pièces dans les cadeaux de Noël <p>
+    <p>
+      <form action="quizz">
+        <label for="rep1">1) Quel est le nombre de page ?</label><br />
+        <input type="text" name="rep1" placeholder="reponce" />
+        <label for="rep2">2) la oû tu m'a chercher tu trouvera </label><br />
+        <input type="text" name="rep2" placeholder="reponce" />
+        <label for="rep3">3) Que dit le pére noel ?</label><br />
+        <input type="text" name="rep3" placeholder="reponce" />
+        <input type="submit" value="Quizz" class=""/> 
+      </form>
+    </p>
+    <p></p>
   </body>
+  <script>
+    const login = document.querySelector(".quizz");
+    login.addEventListener("click", (e) => {
+      e.preventDefault();
+      const rep1 = document.querySelector("input[name=rep1]").value;
+      const rep2 = document.querySelector("input[name=rep2]").value;
+      const rep3 = document.querySelector("input[name=rep3]").value;
+      if (rep1 === "" || rep2 === "" || rep3 === "") {
+        alert("Veuillez remplir tous les champs");
+        return;
+      }
+      else if (rep1 === "67" ) {
+        if (rep2 === "1548" ) {
+          if (rep3 === "ho ho ho" ) {
+            alert("le code est 1122");
+          }
+          else {
+            alert("tu a mal repondue a la question 3");
+
+          }
+        }
+        else {
+          alert("tu a mal repondue a la question 2");
+        }
+      }
+      else {
+        alert("tu a mal repondue a la question 1");
+      }
+    });
+
+  </script>
 </html>
