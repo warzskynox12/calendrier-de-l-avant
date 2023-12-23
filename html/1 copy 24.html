@@ -3,13 +3,15 @@
   <head>
     <style>
       body {
+        width: 100vw;
+        height: 100vh;
+      }
+      p {
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-      }
-      p {
         font-size: 50px;
         text-align: center;
         margin-top: 20%;
@@ -21,12 +23,12 @@
     <p>
       <form action="quizz">
         <label for="rep1">1) Quel est le nombre de page ?</label><br />
-        <input type="text" name="rep1" placeholder="reponce" />
+        <input type="text" name="rep1" placeholder="reponce" /> <br />
         <label for="rep2">2) la oû tu m'a chercher tu trouvera </label><br />
-        <input type="text" name="rep2" placeholder="reponce" />
+        <input type="text" name="rep2" placeholder="reponce" /> <br />
         <label for="rep3">3) Que dit le pére noel ?</label><br />
-        <input type="text" name="rep3" placeholder="reponce" />
-        <input type="submit" value="Quizz" class=""/> 
+        <input type="text" name="rep3" placeholder="reponce" />  <br />
+        <button type="submit">Envoyer</button>
       </form>
     </p>
     <p></p>
@@ -49,7 +51,6 @@
           }
           else {
             alert("tu a mal repondue a la question 3");
-
           }
         }
         else {
