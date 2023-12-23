@@ -21,46 +21,46 @@
   </head>
   <body>
     <p>
-      <form action="quizz">
+      <form action="quizForm">
         <label for="rep1">1) Quel est le nombre de page ?</label><br />
         <input type="text" name="rep1" placeholder="reponce" /> <br />
         <label for="rep2">2) la oû tu m'a chercher tu trouvera </label><br />
         <input type="text" name="rep2" placeholder="reponce" /> <br />
         <label for="rep3">3) Que dit le pére noel ?</label><br />
         <input type="text" name="rep3" placeholder="reponce" />  <br />
-        <button type="submit">Envoyer</button>
+        <button class="quizz">Envoyer</button>
       </form>
     </p>
     <p></p>
   </body>
-  <script>
-    const login = document.querySelector(".quizz");
-    login.addEventListener("click", (e) => {
-      e.preventDefault();
-      const rep1 = document.querySelector("input[name=rep1]").value;
-      const rep2 = document.querySelector("input[name=rep2]").value;
-      const rep3 = document.querySelector("input[name=rep3]").value;
-      if (rep1 === "" || rep2 === "" || rep3 === "") {
-        alert("Veuillez remplir tous les champs");
-        return;
-      }
-      else if (rep1 === "67" ) {
-        if (rep2 === "1548" ) {
-          if (rep3 === "ho ho ho" ) {
-            alert("le code est 1122");
-          }
-          else {
-            alert("tu a mal repondue a la question 3");
-          }
-        }
-        else {
-          alert("tu a mal repondue a la question 2");
-        }
-      }
-      else {
-        alert("tu a mal repondue a la question 1");
-      }
-    });
+ 
+    <script>
+        const quizForm = document.getElementById("quizForm");
+        const quizzButton = quizForm.querySelector(".quizz");
 
-  </script>
+        quizzButton.addEventListener("click", () => {
+            const rep1 = quizForm.querySelector("input[name=rep1]").value;
+            const rep2 = quizForm.querySelector("input[name=rep2]").value;
+            const rep3 = quizForm.querySelector("input[name=rep3]").value;
+
+            if (rep1 === "" || rep2 === "" || rep3 === "") {
+                alert("Veuillez remplir tous les champs");
+                return;
+            } else if (rep1 === "67") {
+                if (rep2 === "1548") {
+                    if (rep3 === "ho ho ho") {
+                        alert("Le code est 1122");
+                    } else {
+                        alert("Tu as mal répondu à la question 3");
+                    }
+                } else {
+                    alert("Tu as mal répondu à la question 2");
+                }
+            } else {
+                alert("Tu as mal répondu à la question 1");
+            }
+        });
+    </script>
+
+
 </html>
